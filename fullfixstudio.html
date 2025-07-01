@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es" id="unico-0">
+<head id="unico-1">
+    <meta charset="UTF-8" id="unico-2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="unico-3">
+    <meta name="description" content="Soluciones tecnol&#xF3;gicas integrales: reparaci&#xF3;n, optimizaci&#xF3;n y desarrollo digital personalizado" id="unico-4">
+    <title id="unico-5">TechSolutions | Reparación y Desarrollo Tecnológico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" id="unico-6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" id="unico-7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" id="unico-8">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;family=Cal+Sans&amp;family=Chau+Philomene+One:ital@0;1&amp;family=Exile&amp;display=swap" rel="stylesheet" id="unico-9">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" id="unico-10"></script>
+    <style id="unico-11">
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Cal Sans', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Alfa Slab One', cursive;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.picoai.app/imagen-proxy?width=1920&height=1080&text=TECHNOLOGY');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 400px;
+            position: relative;
+        }
+        
+        .stats-section {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light);
+            border-radius: 10px;
+        }
+        
+        .contact-section {
+            background-color: var(--light);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body id="unico-12">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="unico-13">
+        <div class="container" id="unico-14">
+            <a class="navbar-brand fs-3 fw-bold" href="#" id="unico-15">DigitalFixLab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="unico-16">
+                <span class="navbar-toggler-icon" id="unico-17"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto" id="unico-18">
+        <li class="nav-item" id="unico-19">
+            <a class="nav-link" href="#products" id="unico-20">Componentes de PC</a>
+        </li>
+<!--         <li class="nav-item" id="unico-21">
+            <a class="nav-link" href="#deals" id="unico-22">Ofertas y Promociones</a>
+        </li> -->
+        <li class="nav-item" id="unico-23">
+            <a class="nav-link" href="#repair" id="unico-24">Reparación y Soporte</a>
+        </li>
+        <li class="nav-item" id="unico-25">
+            <a class="nav-link" href="#reviews" id="unico-26">Unete a nuestra comunidad</a>
+        </li>
+        <li class="nav-item" id="unico-27">
+            <a class="nav-link" href="#contact" id="unico-28">Contáctanos</a>
+        </li>
+    </ul>
+</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center" id="unico-29">
+        <div class="container text-center" id="unico-30">
+            <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown" id="unico-31">Reparamos. Optimizamos. Creamos.</h1>
+            <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s" id="unico-32">Soluciones tecnológicas integrales para el mundo.</p>
+            <div class="animate__animated animate__fadeInUp animate__delay-2s" id="unico-33" style="cursor: pointer;">
+                <a href="#contact" class="btn btn-primary btn-lg px-4 me-2" id="unico-34">Contáctanos</a>
+                <a href="#services" class="btn btn-outline-light btn-lg px-4" id="unico-35">Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container" id="unico-36">
+            <div class="text-center mb-5" id="unico-37">
+                <h2 class="display-4 fw-bold" id="unico-38">Nuestros Servicios</h2>
+                <p class="lead" id="unico-39">Soluciones completas para todas tus necesidades tecnológicas</p>
+            </div>
+            
+            <div class="row g-4" id="unico-40">
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" id="unico-41">
+                    <div class="service-card card h-100" id="unico-42">
+<img src="/assets/tecnicoreparando_1.jpg" 
+     class="card-img-top" 
+     alt="Reparación de computadoras" 
+     id="unico-43" 
+     style="width: 100%; height: 400px; object-fit: cover;">                        <div class="card-body" id="unico-44">
+    <h3 class="card-title" id="unico-45">Reparación y Mantenimiento</h3>
+    <p class="card-text" id="unico-46">Soporte técnico integral para que tu equipo rinda al máximo.</p>
+    <ul class="list-unstyled" id="unico-47">
+        <li id="unico-48"><i class="fas fa-check-circle text-primary me-2" id="unico-49"></i> Limpieza interna, formateo y renovación térmica.</li>
+        <li id="unico-50"><i class="fas fa-check-circle text-primary me-2" id="unico-51"></i> Venta de componentes nuevos y usados.</li>
+        <li id="unico-52"><i class="fas fa-check-circle text-primary me-2" id="unico-53"></i> Garantía en todos los servicios y productos.</li>
+    </ul>
+</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="200" id="unico-54">
+                    <div class="service-card card h-100" id="unico-55">
+<img src="/assets/radeongamingpc.jpg" 
+     class="card-img-top" 
+     alt="Optimización de sistemas" 
+     id="unico-56" 
+     style="width: 100%; height: 400px; object-fit: cover;">                       
+     <div class="card-body" id="unico-57">
+    <h3 class="card-title" id="unico-58">Optimización Avanzada de Sistemas</h3>
+    <p class="card-text" id="unico-59">Impulsamos el rendimiento de tus dispositivos con tecnología de punta, garantizando que tu negocio alcance su máximo potencial.</p>
+    <ul class="list-unstyled" id="unico-60">
+        <li id="unico-61"><i class="fas fa-check-circle text-primary me-2" id="unico-62"></i> Análisis exhaustivo de rendimiento</li>
+        <li id="unico-63"><i class="fas fa-check-circle text-primary me-2" id="unico-64"></i> Eliminación segura de malware</li>
+        <li id="unico-65"><i class="fas fa-check-circle text-primary me-2" id="unico-66"></i> Configuraciones personalizadas y avanzadas</li>
+    </ul>
+</div>
+                    </div>
+                </div>
+                
+<div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="400" id="unico-67">
+    <div class="service-card card h-100" id="unico-68">
+        <img src="assets/celularmano_2.jpg" 
+             class="card-img-top" 
+             alt="Desarrollo digital" 
+             id="unico-69" 
+             style="width: 100%; height: 400px; object-fit: cover;">
+        <div class="card-body" id="unico-70">
+            <h3 class="card-title" id="unico-71">Desarrollo Digital</h3>
+            <p class="card-text" id="unico-72">
+                Desarrollo web y mobile: sitios, apps, sistemas y plataformas hechas con tecnología actual para impulsar tu negocio.
+            </p>
+            <ul class="list-unstyled" id="unico-73">
+                <li id="unico-74">
+                    <i class="fas fa-check-circle text-primary me-2" id="unico-75"></i> Diseño responsivo
+                </li>
+                <li id="unico-76">
+                    <i class="fas fa-check-circle text-primary me-2" id="unico-77"></i> Desarrollo a medida
+                </li>
+                <li id="unico-78">
+                    <i class="fas fa-check-circle text-primary me-2" id="unico-79"></i> Soporte continuo
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+    <!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container" id="unico-80">
+    <div class="row align-items-center" id="unico-81">
+      <div class="col-lg-6 animate-on-scroll" data-animation="fadeInLeft" id="unico-82">
+        <img src="assets/elonmuskstartship.jpg"  
+             alt="Nuestro equipo" 
+             class="img-fluid rounded shadow" 
+             id="unico-83">
+      </div>
+      <div class="col-lg-6 animate-on-scroll" data-animation="fadeInRight" id="unico-84">
+        <h2 class="display-4 fw-bold mb-4" id="unico-85">Inspirados por Elon Musk y la exploración espacial</h2>
+        <p class="lead" id="unico-86">
+          Inspirados por la visión pionera de Elon Musk y los avances en la exploración espacial, transformamos la tecnología para potenciar tu vida cotidiana.
+        </p>
+        <p id="unico-87">
+          Con amplia experiencia, brindamos soluciones tecnológicas innovadoras que impulsan tu equipo hacia el futuro, maximizando rendimiento y eficiencia con herramientas de última generación.
+        </p>
+        <div class="d-flex align-items-center mt-4" id="unico-88" style="cursor: pointer;">
+          <div class="me-4" id="unico-89" style="cursor: pointer;">
+            <h3 class="fw-bold text-primary" id="unico-90">300+</h3>
+            <p id="unico-91">Clientes satisfechos</p>
+          </div>
+          <div class="me-4" id="unico-92" style="cursor: pointer;">
+            <h3 class="fw-bold text-primary" id="unico-93">100%</h3>
+            <p id="unico-94">Garantía de calidad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section d-flex align-items-center" style="background-image: url(&apos;https://images.picoai.app/imagen-proxy?width=1920&amp;height=1080&amp;text=TECNOLOGIA+AVANZADA&apos;);" id="unico-95">
+        <div class="container text-center text-white" id="unico-96">
+            <h2 class="display-3 fw-bold mb-4 animate-on-scroll" data-animation="fadeIn" id="unico-97" style="animation: 1s ease 0ms 1 normal forwards running fadeIn;">Tecnología que impulsa tu negocio</h2>
+            <p class="lead mb-5 animate-on-scroll" data-animation="fadeIn" data-delay="200" id="unico-98" style="animation: 1s ease 200ms 1 normal forwards running fadeIn;">Soluciones personalizadas para cada necesidad</p>
+            <a href="#contact" class="btn btn-primary btn-lg px-5 animate-on-scroll" data-animation="fadeInUp" data-delay="400" id="unico-99" style="animation: 1s ease 400ms 1 normal forwards running fadeInUp;">Comienza ahora</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container" id="unico-100">
+            <div class="text-center mb-5" id="unico-101">
+                <h2 class="display-4 fw-bold" id="unico-102">Nuestro Trabajo</h2>
+                <p class="lead" id="unico-103">Algunos de nuestros proyectos recientes</p>
+            </div>
+            
+            <div class="row g-4" id="unico-104">
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeIn" id="unico-105">
+                    <div class="card border-0 shadow-sm h-100" id="unico-106">
+    <img src="https://images.picoai.app/imagen-proxy?width=600&amp;height=400&amp;text=PROYECTO+1" class="card-img-top" alt="Proyecto 1" id="unico-107">
+    <div class="card-body" id="unico-108" style="cursor: pointer;">
+        <h4 class="card-title" id="unico-109">Sistema de Gestión Empresarial</h4>
+        <p class="card-text" id="unico-110">Plataforma personalizada para automatizar y optimizar tareas y procesos internos.</p>
+    </div>
+</div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeIn" data-delay="200" id="unico-111">
+                    <div class="card border-0 shadow-sm h-100" id="unico-112">
+                        <img src="https://images.picoai.app/imagen-proxy?width=600&amp;height=400&amp;text=PROYECTO+2" class="card-img-top" alt="Proyecto 2" id="unico-113">
+                        <div class="card-body" id="unico-114">
+                            <h4 class="card-title" id="unico-115">Tienda E-commerce</h4>
+                            <p class="card-text" id="unico-116">Solución completa para ventas online con integración de pagos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeIn" data-delay="400" id="unico-117">
+                    <div class="card border-0 shadow-sm h-100" id="unico-118">
+                        <img src="https://images.picoai.app/imagen-proxy?width=600&amp;height=400&amp;text=PROYECTO+3" class="card-img-top" alt="Proyecto 3" id="unico-119">
+                        <div class="card-body" id="unico-120">
+                            <h4 class="card-title" id="unico-121">App Móvil Personalizada</h4>
+                            <p class="card-text" id="unico-122">Aplicación desarrollada para gestión de clientes en campo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5" id="unico-123">
+        <div class="container" id="unico-124">
+            <div class="row text-center" id="unico-125">
+                <div class="col-md-3 animate-on-scroll" data-animation="fadeIn" id="unico-126">
+                    <h3 class="display-3 fw-bold" id="unico-127">98%</h3>
+                    <p class="lead" id="unico-128">Clientes son parte de la comunidad.</p>
+                </div>
+                <div class="col-md-3 animate-on-scroll" data-animation="fadeIn" data-delay="200" id="unico-129">
+                    <h3 class="display-3 fw-bold" id="unico-130">500+</h3>
+                    <p class="lead" id="unico-131">Equipos reparados</p>
+                </div>
+                <div class="col-md-3 animate-on-scroll" data-animation="fadeIn" data-delay="400" id="unico-132">
+                    <h3 class="display-3 fw-bold" id="unico-133">150+</h3>
+                    <p class="lead" id="unico-134">Proyectos completados</p>
+                </div>
+                <div class="col-md-3 animate-on-scroll" data-animation="fadeIn" data-delay="600" id="unico-135">
+                    <h3 class="display-3 fw-bold" id="unico-136">24/7</h3>
+                    <p class="lead" id="unico-137">Soporte disponible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container" id="unico-138">
+            <div class="text-center mb-5" id="unico-139">
+                <h2 class="display-4 fw-bold" id="unico-140">Lo que dicen nuestros clientes</h2>
+                <p class="lead" id="unico-141">Experiencias reales de quienes han trabajado con nosotros</p>
+            </div>
+            
+            <div class="row g-4" id="unico-142">
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" id="unico-143">
+                    <div class="testimonial-card p-4 h-100" id="unico-144">
+                        <div class="d-flex align-items-center mb-3" id="unico-145" style="cursor: pointer;">
+                            <img src="https://images.picoai.app/imagen-proxy?width=100&amp;height=100&amp;text=CLIENTE+1" class="rounded-circle me-3" width="60" alt="Cliente 1" id="unico-146">
+                            <div id="unico-147">
+                                <h5 class="mb-0" id="unico-148">Rimski Harmitton</h5>
+                                <small class="text-muted" id="unico-149">Director ejecutivo</small>
+                            </div>
+                        </div>
+                        <p id="unico-150">"Increíble servicio. Mi computadora volvió a funcionar como nueva y el equipo fue muy profesional en todo momento."</p>
+                        <div class="text-warning" id="unico-151">
+                            <i class="fas fa-star" id="unico-152"></i>
+                            <i class="fas fa-star" id="unico-153"></i>
+                            <i class="fas fa-star" id="unico-154"></i>
+                            <i class="fas fa-star" id="unico-155"></i>
+                            <i class="fas fa-star" id="unico-156"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="200" id="unico-157">
+                    <div class="testimonial-card p-4 h-100" id="unico-158">
+                        <div class="d-flex align-items-center mb-3" id="unico-159">
+                            <img src="https://images.picoai.app/imagen-proxy?width=100&amp;height=100&amp;text=CLIENTE+2" class="rounded-circle me-3" width="60" alt="Cliente 2" id="unico-160">
+                            <div id="unico-161">
+                                <h5 class="mb-0" id="unico-162">Erik Gabriel Harmitton</h5>
+                                <small class="text-muted" id="unico-163">Empresario</small>
+                            </div>
+                        </div>
+                        <p id="unico-164">"El sistema que desarrollaron para mi empresa ha optimizado nuestros procesos en un 40%. Excelente trabajo y atención."</p>
+                        <div class="text-warning" id="unico-165">
+                            <i class="fas fa-star" id="unico-166"></i>
+                            <i class="fas fa-star" id="unico-167"></i>
+                            <i class="fas fa-star" id="unico-168"></i>
+                            <i class="fas fa-star" id="unico-169"></i>
+                            <i class="fas fa-star" id="unico-170"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="400" id="unico-171">
+                    <div class="testimonial-card p-4 h-100" id="unico-172">
+                        <div class="d-flex align-items-center mb-3" id="unico-173">
+                            <img src="https://images.picoai.app/imagen-proxy?width=100&amp;height=100&amp;text=CLIENTE+3" class="rounded-circle me-3" width="60" alt="Cliente 3" id="unico-174">
+                            <div id="unico-175">
+                                <h5 class="mb-0" id="unico-176">Laura Suckerman</h5>
+                                <small class="text-muted" id="unico-177">Freelancer</small>
+                            </div>
+                        </div>
+                        <p id="unico-178">"Rápida respuesta y solución a mi problema. Ahora recomiendo TechSolutions a todos mis colegas. ¡Gracias!"</p>
+                        <div class="text-warning" id="unico-179">
+                            <i class="fas fa-star" id="unico-180"></i>
+                            <i class="fas fa-star" id="unico-181"></i>
+                            <i class="fas fa-star" id="unico-182"></i>
+                            <i class="fas fa-star" id="unico-183"></i>
+                            <i class="fas fa-star-half-alt" id="unico-184"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container" id="unico-185">
+            <div class="row" id="unico-186">
+                <div class="col-lg-6 animate-on-scroll" data-animation="fadeInLeft" id="unico-187">
+                    <h2 class="display-4 fw-bold mb-4" id="unico-188">Contáctanos</h2>
+                    <p class="lead mb-5" id="unico-189">Estamos para brindarte una solucion.</p>
+                    
+                    <div class="mb-4" id="unico-190">
+                        <h4 id="unico-191"><i class="fas fa-map-marker-alt text-primary me-3" id="unico-192"></i> Ubicación:</h4>
+                        <p id="unico-193"> Caballito,Capital Federal, BA </p>
+                    </div>
+                    
+                    <div class="mb-4" id="unico-194" style="cursor: pointer;">
+                        <h4 id="unico-195"><i class="fas fa-phone-alt text-primary me-3" id="unico-196"></i> Teléfono</h4>
+                        <p id="unico-197">+5491127708104</p>
+                    </div>
+                    
+                    <div class="mb-4" id="unico-198">
+                        <h4 id="unico-199"><i class="fas fa-envelope text-primary me-3" id="unico-200"></i> Email</h4>
+                        <p id="unico-201"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8fe6e1e9e0cfebe6e8e6fbeee3e9e6f7e3eeeda1ece0e2">[email&#160;protected]</a></p>
+                    </div>
+                    
+                    <div class="mb-4" id="unico-202">
+                        <h4 id="unico-203"><i class="fas fa-clock text-primary me-3" id="unico-204"></i> Horario</h4>
+                        <p id="unico-205">Lunes a Viernes: 10:30am - 20pm<br id="unico-206">Sábados: 11am - 2pm</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 animate-on-scroll" data-animation="fadeInRight" id="unico-207">
+                    <div class="card shadow-sm" id="unico-208">
+                        <div class="card-body p-4" id="unico-209">
+    <h3 class="mb-4" id="unico-210">¡Escríbenos!</h3>
+    <form id="contactForm">
+        <div class="mb-3" id="unico-211" style="cursor: pointer;">
+            <input type="text" class="form-control" placeholder="Nombre completo" required id="unico-212">
+        </div>
+        <div class="mb-3" id="unico-213" style="cursor: pointer;">
+            <input type="email" class="form-control" placeholder="Correo electr&#xF3;nico" required id="unico-214">
+        </div>
+        <div class="mb-3" id="unico-215" style="cursor: pointer;">
+            <input type="tel" class="form-control" placeholder="Tel&#xE9;fono (opcional)" id="unico-216">
+        </div>
+        <div class="mb-3" id="unico-217" style="cursor: pointer;">
+            <select class="form-select" id="unico-218">
+                <option selected disabled id="unico-219">Selecciona el servicio que necesitas</option>
+                <option id="unico-220">Reparación de equipos</option>
+                <option id="unico-221">Optimización de sistemas</option>
+                <option id="unico-222">Desarrollo web</option>
+                <option id="unico-223">Desarrollo de aplicaciones</option>
+                <option id="unico-224">Otro servicio</option>
+            </select>
+        </div>
+        <div class="mb-3" id="unico-225" style="cursor: pointer;">
+            <textarea class="form-control" rows="5" placeholder="Cu&#xE9;ntanos tu consulta o detalle aqu&#xED;" required id="unico-226"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 py-2" id="unico-227">Enviar mensaje</button>
+    </form>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5" id="unico-228">
+        <div class="container" id="unico-229">
+            <div class="text-center mb-5" id="unico-230">
+                <h2 class="display-4 fw-bold" id="unico-231">Preguntas frecuentes</h2>
+                <p class="lead" id="unico-232">Resolvemos tus dudas más comunes</p>
+            </div>
+            
+            <div class="row justify-content-center" id="unico-233">
+                <div class="col-lg-8" id="unico-234">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm animate-on-scroll" data-animation="fadeInUp" id="unico-235">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" id="unico-236">
+                                    ¿Cuánto tiempo toma una reparación típica?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="unico-237">
+                                    La mayoría de las reparaciones las completamos en 24-48 horas. Problemas más complejos pueden requerir hasta 72 horas. Ofrecemos diagnóstico gratuito para evaluar el tiempo exacto.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm animate-on-scroll" data-animation="fadeInUp" data-delay="200" id="unico-238">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" id="unico-239">
+                                    ¿Ofrecen garantía en sus servicios?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="unico-240">
+                                    Sí, todos nuestros servicios incluyen garantía. Reparaciones tienen 3 meses de garantía, desarrollo web 6 meses, y desarrollo de software 1 año. Cubrimos cualquier problema relacionado con nuestro trabajo.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm animate-on-scroll" data-animation="fadeInUp" data-delay="400" id="unico-241">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" id="unico-242">
+                                    ¿Pueden recuperar datos de equipos dañados?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="unico-243">
+                                    En la mayoría de los casos sí. Tenemos herramientas especializadas para recuperación de datos de discos duros dañados, memorias corruptas y otros dispositivos. Evaluamos cada caso individualmente.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm animate-on-scroll" data-animation="fadeInUp" data-delay="600" id="unico-244">
+                            <h3 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" id="unico-245">
+                                    ¿Cómo es el proceso de desarrollo de software?
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="unico-246">
+                                    Trabajamos con metodologías ágiles. Comenzamos con un análisis de requerimientos, luego diseño de prototipos, desarrollo por etapas con revisiones periódicas, pruebas exhaustivas y lanzamiento con soporte continuo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white" id="unico-247">
+        <div class="container text-center" id="unico-248">
+    <h2 class="display-4 fw-bold mb-4 animate-on-scroll" data-animation="fadeIn" id="unico-249" style="animation: 1s ease 0ms 1 normal forwards running fadeIn;">
+        ¿Preparado para llevar tu idea tecnológica al siguiente nivel?
+    </h2>
+    <p class="lead mb-5 animate-on-scroll" data-animation="fadeIn" data-delay="200" id="unico-250" style="animation: 1s ease 200ms 1 normal forwards running fadeIn;">
+        Contáctanos hoy y descubre todo lo que podemos hacer por ti.
+    </p>
+    <a href="#contact" class="btn btn-light btn-lg px-5 animate-on-scroll" data-animation="fadeInUp" data-delay="400" id="unico-251" style="animation: 1s ease 400ms 1 normal forwards running fadeInUp;">
+        Comienza ahora
+    </a>
+</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5" id="unico-252">
+        <div class="container" id="unico-253">
+            <div class="row" id="unico-254">
+                <div class="col-lg-4 mb-4" id="unico-255">
+                    <h3 class="fw-bold mb-4" id="unico-256">DigitalLab</h3>
+                    <p id="unico-257">Soluciones tecnológicas integrales para empresas y particulares. Reparación, optimización y desarrollo digital personalizado.</p>
+                    <div class="social-icons mt-4" id="unico-258">
+                        <a href="#" class="text-white me-3" id="unico-259"><i class="fab fa-facebook-f" id="unico-260"></i></a>
+                        <a href="#" class="text-white me-3" id="unico-261"><i class="fab fa-twitter" id="unico-262"></i></a>
+                        <a href="#" class="text-white me-3" id="unico-263"><i class="fab fa-instagram" id="unico-264"></i></a>
+                        <a href="#" class="text-white me-3" id="unico-265"><i class="fab fa-linkedin-in" id="unico-266"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4" id="unico-267">
+    <h4 class="fw-bold mb-4" id="unico-268">Servicios Destacados</h4>
+    <ul class="list-unstyled" id="unico-269">
+        <li class="mb-2" id="unico-270"><a href="#" class="text-white" id="unico-271">Reparación y Mantenimiento</a></li>
+        <li class="mb-2" id="unico-272"><a href="#" class="text-white" id="unico-273">Optimización de Rendimiento</a></li>
+        <li class="mb-2" id="unico-274"><a href="#" class="text-white" id="unico-275">Diseño y Desarrollo Web</a></li>
+        <li class="mb-2" id="unico-276"><a href="#" class="text-white" id="unico-277">Apps Móviles y Automatización</a></li>
+        <li class="mb-2" id="unico-278"><a href="#" class="text-white" id="unico-279">Consultoría Técnica Especializada</a></li>
+    </ul>
+</div>
+                
+                <div class="col-lg-2 col-md-6 mb-4" id="unico-280">
+                    <h4 class="fw-bold mb-4" id="unico-281">Enlaces</h4>
+                    <ul class="list-unstyled" id="unico-282">
+                        <li class="mb-2" id="unico-283"><a href="#services" class="text-white" id="unico-284">Servicios</a></li>
+                        <li class="mb-2" id="unico-285"><a href="#about" class="text-white" id="unico-286">Nosotros</a></li>
+                        <li class="mb-2" id="unico-287"><a href="#portfolio" class="text-white" id="unico-288">Portafolio</a></li>
+                        <li class="mb-2" id="unico-289"><a href="#testimonials" class="text-white" id="unico-290">Testimonios</a></li>
+                        <li class="mb-2" id="unico-291"><a href="#contact" class="text-white" id="unico-292">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4" id="unico-293">
+                    <h4 class="fw-bold mb-4" id="unico-294">Newsletter</h4>
+                    <p id="unico-295">Suscríbete para recibir consejos tecnológicos y ofertas especiales.</p>
+                    <form class="mt-4" id="unico-296">
+                        <div class="input-group" id="unico-297">
+                            <input type="email" class="form-control" placeholder="Tu correo electr&#xF3;nico" id="unico-298">
+                            <button class="btn btn-light" type="submit" id="unico-299">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light" id="unico-300">
+            
+            <div class="row" id="unico-301">
+                <div class="col-md-6 text-center text-md-start" id="unico-302">
+                    <p class="mb-0" id="unico-303">&copy; 2023 DigitalFixLab. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end" id="unico-304">
+                    <p class="mb-0" id="unico-305">
+                        <a href="#" class="text-white me-3" id="unico-306">Términos de servicio</a>
+                        <a href="#" class="text-white" id="unico-307">Política de privacidad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" id="unico-308"></script>
+    <script id="unico-309">
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animation = entry.target.getAttribute('data-animation');
+                        const delay = entry.target.getAttribute('data-delay') || 0;
+                        
+                        entry.target.style.animation = `${animation} 1s forwards ${delay}ms`;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(el => observer.observe(el));
+            
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Navbar background on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-dark');
+                    navbar.classList.add('shadow');
+                } else {
+                    navbar.classList.remove('bg-dark');
+                    navbar.classList.remove('shadow');
+                }
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Here you would typically send the form data to your server
+                    alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
